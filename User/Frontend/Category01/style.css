@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Leelawadee UI', Tahoma, sans-serif;
+  background: #aabce0;
+  color: #172554;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 56px 48px 24px;
+}
+
+/* ปุ่มย้อนกลับ */
+.back-link {
+  text-decoration: none;
+  color: #64748b;
+  font-size: 13px;
+  display: inline-block;
+  margin-bottom: 24px;
+  transition: color 0.2s ease;
+}
+
+.back-link:hover {
+  color: #172554;
+}
+
+/* หัวข้อหมวดหมู่ */
+.category-header {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 32px 36px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.category-header h1 {
+  margin: 0;
+  font-size: clamp(26px, 3.5vw, 38px);
+  font-weight: 700;
+  text-align: left;
+}
+
+/* คำอธิบาย */
+.category-description {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.category-description p {
+  margin: 0;
+  font-size: 15px;
+  color: #64748b;
+}
+
+/* ตัวเลือกหัวข้อประเมิน */
+.topics-wrap {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+}
+
+.topic-card {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  min-height: 200px;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px 20px;
+  border-radius: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: flex 0.5s ease, filter 0.3s ease;
+}
+
+.topic-card > span {
+  position: relative;
+  z-index: 1;
+}
+
+/* Gradient backgrounds for topic cards */
+.topic-1 {
+  background: linear-gradient(135deg, #1e3a5f 0%, #2d6a9f 100%);
+}
+
+.topic-2 {
+  background: linear-gradient(135deg, #1a4731 0%, #2d8f5e 100%);
+}
+
+.topic-3 {
+  background: linear-gradient(135deg, #4a1942 0%, #8f2d7e 100%);
+}
+
+.topic-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+
+.topic-card:hover,
+.topic-card:focus-visible {
+  flex: 2.5;
+  filter: brightness(1.15);
+}
+
+.topic-card:focus-visible {
+  outline: 3px solid #60a5fa;
+  outline-offset: 3px;
+}
+
+.topic-number {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  opacity: 0.85;
+}
+
+.topic-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.topic-action {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.topic-card:hover .topic-action,
+.topic-card:focus-visible .topic-action {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ท้ายหน้าเว็บ */
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #dce3ed;
+  color: #64748b;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* Responsive - Tablet */
+@media (max-width: 800px) {
+  .container {
+    padding: 32px 20px;
+  }
+
+  .topics-wrap {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .topic-card {
+    min-height: 120px;
+  }
+
+  .topic-action {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Responsive - Small Mobile */
+@media (max-width: 380px) {
+  .container {
+    padding: 24px 12px;
+  }
+
+  .topic-card {
+    min-height: 100px;
+    padding: 16px;
+  }
+
+  .topic-title {
+    font-size: 17px;
+  }
+}
+
+/* ปิด Effect การเคลื่อนไหวหากผู้ใช้ระบุ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+  }
+}

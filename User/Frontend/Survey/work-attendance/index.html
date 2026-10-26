@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ประเมิน: ลงเวลาปฎิบัติงาน — ระบบประเมินประสิทธิผลIT</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="container">
+
+    <a href="../../Category01/index.html" class="back-link">← ย้อนกลับ</a>
+
+    <div class="survey-header">
+      <p class="survey-category">บุคลากรและการปฏิบัติงาน</p>
+      <h1>ลงเวลาปฎิบัติงาน</h1>
+      <p class="survey-subtitle">แบบประเมินความพึงพอใจ</p>
+    </div>
+
+    <form id="surveyForm" class="survey-form" data-topic="work-attendance" data-category="cat01">
+
+      <!-- คำถามที่ 1 -->
+      <div class="question-card">
+        <label class="question-label">1. ท่านมีความพึงพอใจต่อระบบลงเวลาปฎิบัติงานมากน้อยเพียงใด</label>
+        <div class="rating-group">
+          <label class="rating-option"><input type="radio" name="q1" value="5" required><span>5<br><small>มากที่สุด</small></span></label>
+          <label class="rating-option"><input type="radio" name="q1" value="4"><span>4<br><small>มาก</small></span></label>
+          <label class="rating-option"><input type="radio" name="q1" value="3"><span>3<br><small>ปานกลาง</small></span></label>
+          <label class="rating-option"><input type="radio" name="q1" value="2"><span>2<br><small>น้อย</small></span></label>
+          <label class="rating-option"><input type="radio" name="q1" value="1"><span>1<br><small>น้อยที่สุด</small></span></label>
+        </div>
+      </div>
+
+      <!-- คำถามที่ 2 -->
+      <div class="question-card">
+        <label class="question-label">2. ระบบลงเวลาปฎิบัติงานใช้งานง่ายและสะดวกเพียงใด</label>
+        <div class="rating-group">
+          <label class="rating-option"><input type="radio" name="q2" value="5" required><span>5<br><small>มากที่สุด</small></span></label>
+          <label class="rating-option"><input type="radio" name="q2" value="4"><span>4<br><small>มาก</small></span></label>
+          <label class="rating-option"><input type="radio" name="q2" value="3"><span>3<br><small>ปานกลาง</small></span></label>
+          <label class="rating-option"><input type="radio" name="q2" value="2"><span>2<br><small>น้อย</small></span></label>
+          <label class="rating-option"><input type="radio" name="q2" value="1"><span>1<br><small>น้อยที่สุด</small></span></label>
+        </div>
+      </div>
+
+      <!-- คำถามที่ 3 -->
+      <div class="question-card">
+        <label class="question-label">3. ท่านพึงพอใจต่อความรวดเร็วในการให้บริการของระบบลงเวลาปฎิบัติงานเพียงใด</label>
+        <div class="rating-group">
+          <label class="rating-option"><input type="radio" name="q3" value="5" required><span>5<br><small>มากที่สุด</small></span></label>
+          <label class="rating-option"><input type="radio" name="q3" value="4"><span>4<br><small>มาก</small></span></label>
+          <label class="rating-option"><input type="radio" name="q3" value="3"><span>3<br><small>ปานกลาง</small></span></label>
+          <label class="rating-option"><input type="radio" name="q3" value="2"><span>2<br><small>น้อย</small></span></label>
+          <label class="rating-option"><input type="radio" name="q3" value="1"><span>1<br><small>น้อยที่สุด</small></span></label>
+        </div>
+      </div>
+
+      <!-- ข้อเสนอแนะ -->
+      <div class="question-card">
+        <label class="question-label" for="comment">ข้อเสนอแนะเพิ่มเติม (ถ้ามี)</label>
+        <textarea id="comment" name="comment" class="comment-box" rows="4" placeholder="พิมพ์ข้อเสนอแนะของท่านที่นี่..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">ส่งแบบประเมิน</button>
+
+      <div id="submitStatus" class="submit-status" hidden></div>
+
+    </form>
+
+    <footer>
+      <span>INFORMATION MANAGEMENT SYSTEM</span>
+      <span>USER PORTAL © 2026</span>
+    </footer>
+
+  </main>
+</body>
+</html>
